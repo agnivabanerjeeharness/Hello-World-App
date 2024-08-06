@@ -5,7 +5,7 @@ metadata:
   annotations:
     backstage.io/managed-by-location: group-https://app.harness.io/
     backstage.io/managed-by-origin-location: group-https://app.harness.io/
-  name: accesstest
+  name: access-test
   title: access-test
   created_by: Harness
   uid: 6607d329-2b48-484e-a84e-5a71641fafb6
