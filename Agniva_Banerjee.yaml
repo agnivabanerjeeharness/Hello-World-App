@@ -1,0 +1,25 @@
+apiVersion: backstage.io/v1alpha1
+kind: User
+metadata:
+  namespace: default
+  annotations:
+    backstage.io/managed-by-location: user-https://app.harness.io/
+    backstage.io/managed-by-origin-location: user-https://app.harness.io/
+    harness.io/entity-uuid: RujVBBkgTzW_mLMiT75tBA
+  harness.io/roles: _account_viewer,_account_admin
+  name: agniva.banerjee
+  title: agniva.banerjee
+  uid: b444cfb4-fa76-4964-ace5-3152ab475d21
+  etag: 2e2e49a0e6154e0d461043a4daf6641ee5bb928a
+relations:
+  - type: memberOf
+    targetRef: group:default/harness_account_all_users
+    target:
+      kind: group
+      namespace: default
+      name: harness_account_all_users
+spec:
+  profile:
+    displayName: agniva.banerjee
+    email: agniva.banerjee@harness.io
+  memberOf: []
