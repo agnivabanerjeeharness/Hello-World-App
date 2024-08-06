@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Location
+metadata:
+  namespace: default
+  annotations:
+    backstage.io/managed-by-location: url:https://github.com/Aashrit-Harness/hello-world-app/blob/master/catalog-info-api.yaml
+    backstage.io/managed-by-origin-location: url:https://github.com/Aashrit-Harness/hello-world-app/blob/master/catalog-info-api.yaml
+    backstage.io/view-url: https://github.com/Aashrit-Harness/hello-world-app/blob/master/catalog-info-api.yaml
+    backstage.io/edit-url: https://github.com/Aashrit-Harness/hello-world-app/edit/master/catalog-info-api.yaml
+    backstage.io/source-location: url:https://github.com/Aashrit-Harness/hello-world-app/tree/master/
+  name: generated-069a0e9688753c49f5efd8b8916618bf0b7c1941
+  uid: 8d3227ff-0dc2-4abc-9721-35d2c39740df
+  etag: dd1d3d122904af0b7b9fc486454da1525b78eaaf
+relations: []
+spec:
+  type: url
+  target: https://github.com/Aashrit-Harness/hello-world-app/blob/master/catalog-info-api.yaml
