@@ -1,0 +1,80 @@
+apiVersion: scaffolder.backstage.io/v1beta3
+kind: Template
+metadata:
+  name: create-repo
+  title: Create Repository
+  description: Template for creating a new repository via Harness pipeline
+  tags:
+    - repository
+    - harness
+spec:
+  owner: sandeepa.kv@harness.io
+  type: service
+  parameters:
+    - title: Repository Details
+      type: object
+      required:
+        - repo_name
+        - repo_visibility
+        - account_id
+        - org_name
+        - project_name
+      properties:
+        account_id:
+          title: Harness Account ID
+          type: string
+          description: Harness account ID where the repository will be created
+
+        org_name:
+          title: Organization Name
+          type: string
+          description: Name of the Harness organization
+
+        project_name:
+          title: Project Name
+          type: string
+          description: Name of the Harness project
+
+        repo_name:
+          title: Repository Name
+          type: string
+          description: Name of the repository to be created
+
+        repo_visibility:
+          title: Repository Visibility
+          type: string
+          description: Visibility of the repository (Public or Private)
+          enum:
+            - public
+            - private
+
+        repo_description:
+          title: Repository Description
+          type: string
+          description: Optional description of the repository
+          default: ""
+
+        token:
+          title: Harness Token
+          type: string
+          ui:widget: password
+          ui:field: HarnessAuthToken
+
+  steps:
+    - id: trigger
+      name: Creating Repository
+      action: trigger:harness-custom-pipeline
+      input:
+        url: 'https://harness0.harness.io/ng/account/l7B_kbSEQD2wjrM7PShm5w/module/ci/orgs/PROD/projects/Harness_Commons/pipelines/createRepo/pipeline-studio?storeType=INLINE'
+        inputset:
+          repo_name: ${{ parameters.repo_name }}
+          repo_visibility: ${{ parameters.repo_visibility }}
+          repo_description: ${{ parameters.repo_description }}
+          account_id: ${{ parameters.account_id }}
+          org_name: ${{ parameters.org_name }}
+          project_name: ${{ parameters.project_name }}
+        apikey: ${{ parameters.token }}   
+  output:
+    links:
+      - title: Pipeline Details
+        url: ${{ steps.trigger.output.PipelineUrl }}
