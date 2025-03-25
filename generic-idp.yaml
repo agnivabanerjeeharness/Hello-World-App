@@ -1,7 +1,7 @@
 apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
-  name: "2ndagniva-generic-repo-yaml"
+  name: "genericIDP"
   additionalInfo:
     value1: Aashrit
     value2: Garg
