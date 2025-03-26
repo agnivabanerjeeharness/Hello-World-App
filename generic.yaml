@@ -42,7 +42,7 @@ metadata:
     vault.io/secrets-path: secrets/cd-test/show/github
     # 'jfrog-artifactory/image-name': 'exposures'
     jfrog.com/artifactory-group: io.harness.cv
-    jfrog.com/artifactory-artifact: data-collection-dsl
+    jfrog.com/artifactory-artifact: harness
     jfrog.com/artifactory-repo: agniva-genric-generic-local
     # jfrog.com/artifactory-packaging: jar
     #jfrog.com/artifactory-scope: compile
