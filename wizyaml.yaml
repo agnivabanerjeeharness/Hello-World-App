@@ -1,0 +1,28 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  annotations:
+    backstage.io/managed-by-location: url:https://app.harness.io/Component/default/boutiqudfdfecheckout
+    backstage.io/managed-by-origin-location: url:https://app.harness.io/Component/default/boutiqudfdfecheckout
+    backstage.io/view-url: https://app.harness.io/Component/default/boutiqudfdfecheckout
+    wiz.io/project-id: project
+  name: boutiqudfdfecheckout
+  namespace: default
+  description: dhgfjfdas jdagaldfgsd fdhkdhaskhu
+  title: Boutique Checkout dasdsada
+  tags:
+    - python-test
+    - java
+  uid: cb5b6256-6582-4a2a-b79f-9d44359fa92a
+  etag: 7b6caed95a0e377492a352640ff7a462f0d24b07
+relations:
+  - type: ownedBy
+    targetRef: group:default/test_user
+    target:
+      kind: group
+      namespace: default
+      name: test_user
+spec:
+  lifecycle: Production
+  type: service
+  owner: group:default/test_user
