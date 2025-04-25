@@ -7,6 +7,9 @@ metadata:
     value2: Garg
     value3: google
   annotations:
+    harness.io/pipelines: |
+      CI: https://qa.harness.io/ng/account/rzjR8UyZTpOAd6SLDfdBuw/module/ci/orgs/default/projects/idptest/pipelines/workflowtimeout/pipeline-studio/?storeType=INLINE
+      CD: https://qa.harness.io/ng/account/rzjR8UyZTpOAd6SLDfdBuw/module/cd/orgs/default/projects/idptest/pipelines/workflowtimeout/pipeline-studio/?storeType=INLINE
     backstage.io/techdocs-ref: dir:.
     github.com/project-slug: Aashrit-Harness/hello-world-app
     backstage.io/kubernetes-label-selector: 'app=idp-ui'
